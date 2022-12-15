@@ -16,16 +16,6 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
-
-        Properties properties = new Properties()
-        properties.load(project.rootProject.file("local.properties").newDataInputStream())
-
-        buildConfigField "String", "BASE_URL", "\"${properties.getProperty("BASE_URL")}\""
-        buildConfigField "String", "API_KEY", "\"${properties.getProperty("API_KEY")}\""
-        buildConfigField "String", "TV_BACKDROP", "\"${properties.getProperty("TV_BACKDROP")}\""
-        buildConfigField "String", "TV_POSTER", "\"${properties.getProperty("TV_POSTER")}\""
-        buildConfigField "String", "EN_US", "\"${properties.getProperty("EN_US")}\""
-
     }
 
     buildTypes {
