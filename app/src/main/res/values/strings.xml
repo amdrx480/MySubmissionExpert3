@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">MySubmissionExpert</string>
+    <string name="title_home">Home</string>
+    <string name="title_aboutUs">About Us</string>
+    <string name="image_description">Image</string>
+    <string name="text_primary">Sample of title text</string>
+    <string name="text_subtitle">Sample of subtitle text</string>
+    <string name="something_wrong">Oops.. something went wrong</string>
+
+    <!-- Detail TvDb -->
+    <string name="text_name">Sword Art Online Movie: Ordinal Scale (2017)</string>
+    <string name="text_date">18/02/2017</string>
+    <string name="text_score">80%</string>
+    <string name="text_overview">We wrote this one-page film synopsis example to give you an idea of their style and content.</string>
+    <string name="text_favorite">favorite</string>
+    <string name="AboutUs">Lets talk about TMDB The Movie Database (TMDB) is a community built movie and TV database. Every piece of data has been added by our amazing community dating back to 2008. TMDBs strong international focus and breadth of data is largely unmatched and something were incredibly proud of. Put simply, we live and breathe community and thats precisely what makes us different.</string>
+
+    <!-- Home View Tv Movie -->
+    <string name="title_TvMovie">TV Movie</string>
+    <string name="title_favorite">Favorite</string>
+</resources>
