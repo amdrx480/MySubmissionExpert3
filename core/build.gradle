@@ -32,11 +32,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    testOptions {
-        unitTests {
-            includeAndroidResources = true
-        }
-    }
     buildFeatures {
         viewBinding true
     }
@@ -53,8 +48,6 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
-
-    testImplementation 'org.robolectric:robolectric:4.8'
 
     //Retrofit
     implementation "com.squareup.retrofit2:retrofit:2.9.0"

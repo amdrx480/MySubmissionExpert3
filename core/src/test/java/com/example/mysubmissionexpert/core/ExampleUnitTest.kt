@@ -11,7 +11,6 @@ import org.robolectric.RobolectricTestRunner
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-@RunWith(RobolectricTestRunner::class)
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
