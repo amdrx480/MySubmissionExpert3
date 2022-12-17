@@ -5,17 +5,12 @@ import android.os.Bundle
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.example.mysubmissionexpert.R
-import com.example.mysubmissionexpert.core.BuildConfig
 import com.example.mysubmissionexpert.core.domain.model.TvDb
 import com.example.mysubmissionexpert.core.utils.Constanta
 import com.example.mysubmissionexpert.databinding.ActivityDetailTvDbBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class DetailTvDbActivity : AppCompatActivity() {
-
-    companion object {
-        const val EXTRA_DATA = "extra_data"
-    }
 
     private lateinit var binding: ActivityDetailTvDbBinding
     private val detailTvDbViewModel: DetailTvDbViewModel by viewModel()
@@ -76,5 +71,9 @@ class DetailTvDbActivity : AppCompatActivity() {
     override fun onSupportNavigateUp():Boolean{
         onBackPressed()
         return true
+    }
+
+    companion object {
+        const val EXTRA_DATA = "extra_data"
     }
 }

@@ -1,6 +1,5 @@
 package com.example.mysubmissionexpert.core.domain.usecase
 
-import com.example.mysubmissionexpert.core.data.Resource
 import com.example.mysubmissionexpert.core.domain.model.TvDb
 import io.reactivex.Flowable
 

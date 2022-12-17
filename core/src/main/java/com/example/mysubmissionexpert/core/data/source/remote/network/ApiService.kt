@@ -1,6 +1,5 @@
 package com.example.mysubmissionexpert.core.data.source.remote.network
 
-import com.example.mysubmissionexpert.core.BuildConfig
 import com.example.mysubmissionexpert.core.data.source.remote.response.ListTvDbResponse
 import com.example.mysubmissionexpert.core.utils.Constanta
 import io.reactivex.Flowable

@@ -19,7 +19,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
-    private val binding get() = _binding!!
+    private val binding get() = requireNotNull(_binding)
 
     private val homeViewModel: HomeViewModel by viewModel()
 
@@ -53,11 +53,10 @@ class HomeFragment : Fragment() {
                         is com.example.mysubmissionexpert.core.data.Resource.Loading -> showLoading(true)
                         is com.example.mysubmissionexpert.core.data.Resource.Success -> {
                             showLoading(false)
-                            val tvDbAdapter = TvDbAdapter()
-                            tvDbAdapter.notifyDataSetChanged()
                             it.data?.let { data -> listTvDbAdapter.setData(data) }
                         }
                         is com.example.mysubmissionexpert.core.data.Resource.Error -> {
+                            showLoading(false)
                             binding.progressBar.visibility = View.GONE
                             binding.ivError.visibility = View.VISIBLE
                             Glide.with(this)
@@ -79,12 +78,10 @@ class HomeFragment : Fragment() {
             }
         }
     }
+
     private fun showLoading(state: Boolean) {
-        if (state)
-            binding.progressBar.visibility = View.VISIBLE
-        else
-            binding.progressBar.visibility = View.GONE
-    }
+            binding.progressBar.visibility = if (state) View.VISIBLE else View.GONE }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

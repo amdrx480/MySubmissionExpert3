@@ -1,9 +1,6 @@
 package com.example.mysubmissionexpert.core.di
 
 import androidx.room.Room
-import com.example.mysubmissionexpert.core.BuildConfig
-import com.example.mysubmissionexpert.core.data.TvDbRepository
-import com.example.mysubmissionexpert.core.data.source.local.LocalDataSource
 import com.example.mysubmissionexpert.core.data.source.local.room.TvDbDatabase
 import com.example.mysubmissionexpert.core.data.source.remote.RemoteDataSource
 import com.example.mysubmissionexpert.core.data.source.remote.network.ApiService

@@ -3,12 +3,14 @@ package com.example.mysubmissionexpert.core.ui
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.mysubmissionexpert.core.R
 import com.example.mysubmissionexpert.core.databinding.ItemListTvDbBinding
 import com.example.mysubmissionexpert.core.domain.model.TvDb
 import com.example.mysubmissionexpert.core.utils.Constanta
+import com.example.mysubmissionexpert.core.utils.TvDbDiffCallback
 import java.util.ArrayList
 
 class TvDbAdapter : RecyclerView.Adapter<TvDbAdapter.ListViewHolder>() {
@@ -21,10 +23,12 @@ class TvDbAdapter : RecyclerView.Adapter<TvDbAdapter.ListViewHolder>() {
     }
 
     fun setData(newListData: List<TvDb>) {
+        val diffCallback = TvDbDiffCallback(listData, newListData)
+        val diffResult = DiffUtil.calculateDiff(diffCallback)
         listData.clear()
         listData.addAll(newListData)
-        notifyDataSetChanged()
-        Log.d("TAG", "cek item masuk ${listData.toString()}")
+        diffResult.dispatchUpdatesTo(this)
+        Log.d("TAG", "cek item masuk $listData")
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) : ListViewHolder {
