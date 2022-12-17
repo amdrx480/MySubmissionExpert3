@@ -35,9 +35,6 @@ android {
     buildFeatures {
         viewBinding true
     }
-    defaultConfig {
-        buildConfigField("String", "API_KEY", "\"c342be415b41a870c78c9f566fd8ebbf\"")
-    }
     kotlinOptions {
         jvmTarget = '1.8'
     }
